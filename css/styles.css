@@ -567,6 +567,7 @@ p {
   transform: translate(-50%, -50%);
   border-radius: 4px;
   padding: 72px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button {
@@ -583,12 +584,14 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover,
 .modal-close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-button-icon {
@@ -690,6 +693,10 @@ p {
   border-color: #4d5ae5;
 }
 
+.modal-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
 .check-text {
   font-weight: 400;
   font-size: 12px;
@@ -721,6 +728,7 @@ span {
   border: none;
   fill: #f4f4fd;
 }
+
 .modal-link {
   text-decoration: underline;
   color: #4d5ae5;
@@ -742,7 +750,7 @@ span {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin: 24px auto;
+  margin: 0 auto 24px;
   padding: 16px 32px;
   cursor: pointer;
   border: none;
